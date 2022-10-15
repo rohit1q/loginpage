@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:pro/Pages/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pro/Pages/login_page.dart';
+import 'package:pro/utils/routes.dart';
+
 
 void main(){
   runApp(rohitApp());
@@ -30,7 +32,7 @@ class rohitApp extends StatelessWidget {
           fontFamily: GoogleFonts.nunito().fontFamily,
          // primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
-
+debugShowCheckedModeBanner: false, //to remove debug from left cornor
       darkTheme: ThemeData(
 
 
@@ -39,8 +41,8 @@ class rohitApp extends StatelessWidget {
       initialRoute: "/",    //we can call any page
       routes: {
         "/":(context)=>LoginPage(),
-        "/home":(context)=>homepage(),
-        "/login":(context)=>LoginPage()
+        MyRoutes.homeRoute:(context)=>homepage(),
+        MyRoutes.loginRoute:(context)=>LoginPage()
       },
     );
   }
