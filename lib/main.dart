@@ -28,7 +28,7 @@ class rohitApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: ThemeData(
-          primarySwatch: Colors.green,
+          primarySwatch: Colors.red,
           fontFamily: GoogleFonts.nunito().fontFamily,
          // primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
@@ -38,7 +38,7 @@ debugShowCheckedModeBanner: false, //to remove debug from left cornor
 
         brightness: Brightness.light,  //properties override according to dark
       ),
-      initialRoute: "/",    //we can call any page
+      initialRoute: MyRoutes.homeRoute,    //we can call any page
       routes: {
         "/":(context)=>LoginPage(),
         MyRoutes.homeRoute:(context)=>homepage(),

@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "Enter username",
                           labelText: "username",
                         ),
-                        validator: (value) {
+                        validator: (value) {         //gives the value
                           if (value!.isEmpty){
                             return "user name can't be empty";
                           }
@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius:
                           BorderRadius.circular(changebutton?20:8),
                         child: InkWell(
-                          onTap:()=>moveToHome(context),
+                          onTap:()=>moveToHome(context),    //=> short hand operator
 
                           child: AnimatedContainer(
                             duration: Duration(seconds: 1),
